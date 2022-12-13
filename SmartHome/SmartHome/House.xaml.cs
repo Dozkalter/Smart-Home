@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -23,24 +24,70 @@ namespace SmartHome
     public partial class House : Window
     {
         MainWindow mainWindow;
+        int id;
+        string? savedButton;
+        Canvas cl;
         private static Border? draggedItem;
-        public House(MainWindow mainWindow)
+        public MySqlConnection connection;
+        string ObjectName;
+        public House(MainWindow mainWindow,int id)
         {
+            this.id = id;
+            connection = new MySqlConnection("server=localhost;user id=root;database=library");
             InitializeComponent();
-            
+            //try
+            //{
+            //    connection.Open();
+            //    MySqlCommand command = new MySqlCommand("SELECT * FROM canvas ", connection);
+            //    MySqlDataReader reader = command.ExecuteReader();
+            //    if (reader.Read())
+            //    {
+            //        savedButton = (string)reader[0];
+            //    }
+            //    StringReader? stringReader = new StringReader(savedButton);
+            //    XmlReader xmlReader = XmlReader.Create(stringReader);
+            //    Canvas readerLoadButton = (Canvas)XamlReader.Load(xmlReader);
+            //    borderTest.Children.Add(readerLoadButton);
+            //    connection.Close();
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
+
+
             this.mainWindow = mainWindow;
+
+           
         }
 
         private void btnHome_Click(object sender, RoutedEventArgs e)
         {
-
+            
+            
+            HouseBorder.Child = borderTest;
+            borderTest.Visibility = Visibility.Visible;
+            
+            
         }
 
         private void Logout_Click(object sender, RoutedEventArgs e)
         {
+            //savedButton = XamlWriter.Save(borderTest);
+            //try
+            //{
+            //    connection.Open();
+            //    MySqlCommand command = new MySqlCommand("INSERT INTO canvas VALUES ('" + savedButton + "')", connection);
+            //    command.ExecuteNonQuery();
+            //    connection.Close();
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
             this.Close();
             mainWindow.Show();
-           
+
 
         }
 
@@ -54,14 +101,53 @@ namespace SmartHome
         }
         private void Border_Drop(object sender, DragEventArgs e)
         {
+
             Border clonedCanvas = Clone<Border>(draggedItem);
+            clonedCanvas.Margin = ToiletRoom.Margin;
             Point p = e.GetPosition(borderTest);
             clonedCanvas.Width = draggedItem.ActualWidth;
             clonedCanvas.Height = draggedItem.ActualHeight;
             Canvas.SetLeft(clonedCanvas, p.X - 40);
             Canvas.SetTop(clonedCanvas, p.Y - 40);
             borderTest.Children.Add(clonedCanvas);
+            clonedCanvas.MouseRightButtonDown += clonedCanvas_MouseRightButtonDown;
+            clonedCanvas.MouseLeftButtonDown += clonedCanvas_MouseLeftButtonDown;
             Cursor = Cursors.Arrow;
+        }
+
+        private void clonedCanvas_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            
+            borderTest.Visibility = Visibility.Hidden;
+
+            switch (((Border)sender).Name)
+            {
+                case "ToiletRoom":
+                    cl = Clone<Canvas>(ToiletObjects);
+                    cl.Visibility = Visibility.Visible;
+                    HouseBorder.Child = cl;
+                    break;
+                case "KitchenRoom":
+                    cl = Clone<Canvas>(KitchenObjects);
+                    cl.Visibility = Visibility.Visible;
+                    HouseBorder.Child = cl;
+                    break;
+                case "LivingRoom":
+                    cl = Clone<Canvas>(LivingObjects);
+                    cl.Visibility = Visibility.Visible;
+                    HouseBorder.Child = cl;
+                    break;
+            }
+
+            
+            
+
+
+        }
+
+        void clonedCanvas_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            borderTest.Children.Remove((Border)sender);
         }
 
         public static T Clone<T>(T source)
@@ -74,7 +160,7 @@ namespace SmartHome
         }
         private void btnProfil_Click(object sender, RoutedEventArgs e)
         {
-            profilPage profil = new profilPage();
+            profilPage profil = new profilPage(id);
             profil.Show();
 
         }
@@ -151,6 +237,15 @@ namespace SmartHome
                 e.UseDefaultCursors = true;
 
             e.Handled = true;
+        }
+
+        
+
+        private void ToiletObject_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("aze");
+            
+             
         }
     }
 }

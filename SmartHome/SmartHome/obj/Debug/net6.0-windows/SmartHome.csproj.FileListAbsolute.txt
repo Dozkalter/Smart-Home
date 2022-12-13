@@ -154,8 +154,10 @@ C:\Users\acer\OneDrive\Documents\GitHub\Smart-Home\SmartHome\SmartHome\bin\Debug
 C:\Users\acer\OneDrive\Documents\GitHub\Smart-Home\SmartHome\SmartHome\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
 C:\Users\acer\OneDrive\Documents\GitHub\Smart-Home\SmartHome\SmartHome\obj\Debug\net6.0-windows\SmartHome.csproj.AssemblyReference.cache
 C:\Users\acer\OneDrive\Documents\GitHub\Smart-Home\SmartHome\SmartHome\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\acer\OneDrive\Documents\GitHub\Smart-Home\SmartHome\SmartHome\obj\Debug\net6.0-windows\profilPage.baml
 C:\Users\acer\OneDrive\Documents\GitHub\Smart-Home\SmartHome\SmartHome\obj\Debug\net6.0-windows\House.g.cs
 C:\Users\acer\OneDrive\Documents\GitHub\Smart-Home\SmartHome\SmartHome\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\acer\OneDrive\Documents\GitHub\Smart-Home\SmartHome\SmartHome\obj\Debug\net6.0-windows\profilPage.g.cs
 C:\Users\acer\OneDrive\Documents\GitHub\Smart-Home\SmartHome\SmartHome\obj\Debug\net6.0-windows\App.g.cs
 C:\Users\acer\OneDrive\Documents\GitHub\Smart-Home\SmartHome\SmartHome\obj\Debug\net6.0-windows\SmartHome_MarkupCompile.cache
 C:\Users\acer\OneDrive\Documents\GitHub\Smart-Home\SmartHome\SmartHome\obj\Debug\net6.0-windows\SmartHome_MarkupCompile.lref

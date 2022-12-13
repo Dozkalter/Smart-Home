@@ -31,17 +31,17 @@
                             <TextBlock  Text="User Profil" Margin="20" Foreground="White" TextAlignment="Center" FontSize="38" FontFamily="C:\Users\elgbouri saad\Documents\GitHub\Smart-Home\SmartHome\SmartHome\FontFamily\#Great Vibes" />
                             <StackPanel Orientation="Horizontal" Margin="10">
                                 <materialDesign:PackIcon Kind="User" Width="25" Height="25" Foreground="white" />
-                                <TextBox  x:Name="TxtUsername1" materialDesign:HintAssist.Hint="Entrer Nom" Margin="10 0"   Background="Transparent" Padding="3"  Width="250" BorderBrush="White" CaretBrush="#FFD94448" SelectionBrush="#FFD94448" Foreground="White"/>
+                                <TextBox  x:Name="TxtNom" materialDesign:HintAssist.Hint="Entrer Nom" Margin="10 0"   Background="Transparent" Padding="3"  Width="250" BorderBrush="White" CaretBrush="#FFD94448" SelectionBrush="#FFD94448" Foreground="White"/>
                             </StackPanel>
 
                             <StackPanel Orientation="Horizontal" Margin="10">
                                 <materialDesign:PackIcon Kind="User" Width="25" Height="25" Foreground="white" />
-                                <TextBox  x:Name="TxtUsername2" materialDesign:HintAssist.Hint="Entrer Prenom" Margin="10 0"   Background="Transparent" Padding="3"  Width="250" BorderBrush="White" CaretBrush="#FFD94448" SelectionBrush="#FFD94448" Foreground="White"/>
+                                <TextBox  x:Name="TxtPrenom" materialDesign:HintAssist.Hint="Entrer Prenom" Margin="10 0"   Background="Transparent" Padding="3"  Width="250" BorderBrush="White" CaretBrush="#FFD94448" SelectionBrush="#FFD94448" Foreground="White"/>
                             </StackPanel>
 
                             <StackPanel Orientation="Horizontal" Margin="10">
                                 <materialDesign:PackIcon Kind="Email" Width="25" Height="25" Foreground="white" />
-                                <TextBox  x:Name="TxtUsername3" materialDesign:HintAssist.Hint="Entrer Email" Margin="10 0"   Background="Transparent" Padding="3"  Width="250" BorderBrush="White" CaretBrush="#FFD94448" SelectionBrush="#FFD94448" Foreground="White"/>
+                                <TextBox  x:Name="TxtEmail" materialDesign:HintAssist.Hint="Entrer Email" Margin="10 0"   Background="Transparent" Padding="3"  Width="250" BorderBrush="White" CaretBrush="#FFD94448" SelectionBrush="#FFD94448" Foreground="White"/>
                             </StackPanel>
 
                             <StackPanel Orientation="Horizontal" Margin="10">
@@ -54,7 +54,7 @@
 
                             </StackPanel>
                             <StackPanel>
-                                <Button Margin="0 15 0 0"  Width="100" Height="40" Content="Modify" Style="{StaticResource MaterialDesignRaisedButton}" materialDesign:ButtonAssist.CornerRadius="10" BorderThickness="2" BorderBrush="#D94448" Background="#D94448" ToolTip="Login" x:Name="BtnLogin1" Click="BtnLogin1_Click"/>
+                                <Button Margin="0 15 0 0"  Width="100" Height="40" Content="Modify" Style="{StaticResource MaterialDesignRaisedButton}" materialDesign:ButtonAssist.CornerRadius="10" BorderThickness="2" BorderBrush="#D94448" Background="#D94448" ToolTip="Login" x:Name="BtnModify" Click="BtnModify_Click"/>
 
                             </StackPanel>
                         </StackPanel>

@@ -42,7 +42,7 @@ namespace SmartHome
                     if (TxtUsername.Text == (string)reader[3] && TxtPassword.Password.ToString() == (string)reader[4])
                     {
                         MessageBox.Show("Welcome back " + reader[2] + " " + reader[1], "Congrats", MessageBoxButton.OK, MessageBoxImage.Information);
-                        House house = new House(this);
+                        House house = new House(this, (int) reader[0]);
                         house.Show();
                         this.Hide();
                     }

@@ -8,13 +8,48 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Images\" />
+    <None Remove="images\ICON4801.png" />
+    <None Remove="images\picssmarthome\Climatiseur.jpg" />
+    <None Remove="images\picssmarthome\CoverToiletUp.jpg" />
+    <None Remove="images\picssmarthome\DishWasher.jpg" />
+    <None Remove="images\picssmarthome\FlushToilet.jpg" />
+    <None Remove="images\picssmarthome\kitchen cartoon1.jpg" />
+    <None Remove="images\picssmarthome\Kitchen.webp" />
+    <None Remove="images\picssmarthome\last toilet pic.webp" />
+    <None Remove="images\picssmarthome\LightBulb.webp" />
+    <None Remove="images\picssmarthome\LivingRoom.webp" />
+    <None Remove="images\picssmarthome\livingroomcartoon.jpg" />
+    <None Remove="images\picssmarthome\Refrigerateur.jpg" />
+    <None Remove="images\picssmarthome\Television.jpg" />
+    <None Remove="images\picssmarthome\toilet room cartoon.webp" />
+    <None Remove="images\picssmarthome\ToiletRoom.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="FontFamily\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="MaterialDesignThemes" Version="4.6.1" />
     <PackageReference Include="MySql.Data" Version="8.0.31" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\ICON4801.png" />
+    <Resource Include="images\picssmarthome\Climatiseur.jpg" />
+    <Resource Include="images\picssmarthome\CoverToiletUp.jpg" />
+    <Resource Include="images\picssmarthome\DishWasher.jpg" />
+    <Resource Include="images\picssmarthome\FlushToilet.jpg" />
+    <Resource Include="images\picssmarthome\kitchen cartoon1.jpg" />
+    <Resource Include="images\picssmarthome\Kitchen.webp" />
+    <Resource Include="images\picssmarthome\last toilet pic.webp" />
+    <Resource Include="images\picssmarthome\LightBulb.webp" />
+    <Resource Include="images\picssmarthome\LivingRoom.webp" />
+    <Resource Include="images\picssmarthome\livingroomcartoon.jpg" />
+    <Resource Include="images\picssmarthome\Refrigerateur.jpg" />
+    <Resource Include="images\picssmarthome\Television.jpg" />
+    <Resource Include="images\picssmarthome\toilet room cartoon.webp" />
+    <Resource Include="images\picssmarthome\ToiletRoom.jpg" />
   </ItemGroup>
 
 </Project>
